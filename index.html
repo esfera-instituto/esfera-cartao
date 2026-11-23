@@ -129,6 +129,9 @@
     }
 
     .level-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
       font-size: 10px;
@@ -136,13 +139,35 @@
       text-transform: uppercase;
       color: var(--azul);
       background: #DCEAF3;
+      border: 1px solid rgba(10,61,90,0.14);
       border-radius: 20px;
-      padding: 6px 14px;
+      padding: 7px 14px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+
+    .level-tag:hover {
+      background: var(--azul);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(8,36,61,0.14);
     }
 
     .level-tag.clinico {
       background: var(--marinho);
       color: #ffffff;
+      border-color: var(--marinho);
+    }
+
+    .level-tag.clinico:hover {
+      background: var(--azul-vivo);
+      border-color: var(--azul-vivo);
+    }
+
+    .level-tag .tag-arrow {
+      font-size: 11px;
+      opacity: 0.75;
     }
 
     /* Destaque Clínico: Psicopedagogia & Neuropsicopedagogia */
@@ -365,10 +390,18 @@
       </p>
 
       <div class="levels">
-        <span class="level-tag">Ensino Fundamental</span>
-        <span class="level-tag">Ensino Médio</span>
-        <span class="level-tag">Ensino Superior</span>
-        <span class="level-tag clinico">Psico &amp; Neuropsicopedagogia</span>
+        <a class="level-tag" href="https://esferaaulasparticulares.com.br/ensino-fundamental" target="_blank" rel="noopener noreferrer">
+          Ensino Fundamental <span class="tag-arrow">↗</span>
+        </a>
+        <a class="level-tag" href="https://esferaaulasparticulares.com.br/ensino-medio" target="_blank" rel="noopener noreferrer">
+          Ensino Médio <span class="tag-arrow">↗</span>
+        </a>
+        <a class="level-tag" href="https://esferaaulasparticulares.com.br/ensino-superior" target="_blank" rel="noopener noreferrer">
+          Ensino Superior <span class="tag-arrow">↗</span>
+        </a>
+        <a class="level-tag clinico" href="https://esferaaulasparticulares.com.br/psicopedagogia" target="_blank" rel="noopener noreferrer">
+          Psico &amp; Neuropsicopedagogia <span class="tag-arrow">↗</span>
+        </a>
       </div>
 
       <!-- Destaque Clínico -->
